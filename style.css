@@ -500,6 +500,107 @@ header{
     color:#666;
 
 }
+/*================ SERVICES CARDS =================*/
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.service-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    border:1px solid #eee;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--gold);
+
+}
+
+.service-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:rgba(212,175,55,.12);
+
+    color:var(--gold);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+}
+
+.service-card h3{
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.service-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.service-card a{
+
+    color:var(--secondary);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.service-card a i{
+
+    margin-left:8px;
+
+    transition:.3s;
+
+}
+
+.service-card:hover a i{
+
+    margin-left:14px;
+
+}
 /*================ SECTION TITLE =================*/
 
 .section-tag{
@@ -727,6 +828,11 @@ header{
     grid-template-columns:repeat(2,1fr);
 
 }
+    .services-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
 }
 
 /* ================= MOBILE ================= */
@@ -922,6 +1028,11 @@ header{
 .section-description{
 
     margin-bottom:45px;
+
+}
+    .services-grid{
+
+    grid-template-columns:1fr;
 
 }
 }
