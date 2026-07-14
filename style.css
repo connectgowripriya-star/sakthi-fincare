@@ -248,36 +248,91 @@ header{
 
 }
 
+/*================ TRUST BADGES =================*/
+
 .hero-features{
 
     display:flex;
 
-    flex-direction:column;
+    flex-wrap:wrap;
 
     gap:18px;
 
-    margin-bottom:40px;
+    margin:40px 0;
 
 }
 
-.hero-features div{
+.feature-card{
 
     display:flex;
 
     align-items:center;
 
-    gap:15px;
+    gap:16px;
 
-    font-weight:500;
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    padding:16px 22px;
+
+    border-radius:16px;
+
+    transition:.35s;
 
 }
 
-.hero-features i{
+.feature-card:hover{
 
-    color:var(--gold);
+    transform:translateY(-6px);
+
+    background:rgba(255,255,255,.15);
 
 }
 
+.feature-card i{
+
+    width:52px;
+
+    height:52px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--gold);
+
+    color:white;
+
+    border-radius:50%;
+
+    font-size:20px;
+
+    flex-shrink:0;
+
+}
+
+.feature-card h4{
+
+    color:white;
+
+    margin-bottom:5px;
+
+    font-size:17px;
+
+}
+
+.feature-card span{
+
+    color:#ddd;
+
+    font-size:14px;
+
+}
 .hero-buttons{
 
     display:flex;
@@ -759,7 +814,15 @@ header{
 
 .hero-features{
 
-    align-items:center;
+    justify-content:center;
+
+}
+
+.feature-card{
+
+    width:100%;
+
+    justify-content:flex-start;
 
 }
 
@@ -884,6 +947,17 @@ header{
 .stats-grid{
 
     grid-template-columns:1fr;
+
+}
+    .feature-card{
+
+    padding:14px;
+
+}
+
+.feature-card h4{
+
+    font-size:16px;
 
 }
 }
