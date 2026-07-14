@@ -3,7 +3,29 @@
     padding:0;
     box-sizing:border-box;
 }
+/* ================= GLOBAL RESPONSIVE FIX ================= */
 
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+html,
+body{
+    overflow-x:hidden;
+    width:100%;
+}
+body.menu-open{
+
+    overflow:hidden;
+
+}
+img{
+    max-width:100%;
+    height:auto;
+    display:block;
+}
 :root{
 
     --primary:#0B1D3A;
@@ -44,9 +66,8 @@ section{
 }
 
 .container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+    width:min(90%,1200px);
+    margin:0 auto;
 }
 
 /*==================== NAVBAR ====================*/
@@ -909,7 +930,7 @@ header{
 
         padding:35px 0;
 
-        transition:.4s;
+         transition:left .4s ease;
 
     }
 
