@@ -506,25 +506,21 @@ header{
 
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(3,minmax(280px,1fr));
 
-    gap:30px;
+    gap:35px;
 
 }
 
 .service-card{
 
-    background:white;
+    display:flex;
 
-    border-radius:20px;
+    flex-direction:column;
 
-    padding:35px;
+    justify-content:flex-start;
 
-    box-shadow:var(--shadow);
-
-    transition:.35s;
-
-    border:1px solid #eee;
+    min-height:320px;
 
 }
 
