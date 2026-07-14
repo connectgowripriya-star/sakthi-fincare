@@ -380,7 +380,7 @@ header{
 
     font-size:49px;
 
-    line-height:1.1;
+    line-height:1.2;
 
     margin-bottom:25px;
 
@@ -498,6 +498,64 @@ header{
 .stat-card p{
 
     color:#666;
+
+}
+/*================ SECTION TITLE =================*/
+
+.section-tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    background:#EEF5FF;
+
+    color:var(--secondary);
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    margin-bottom:18px;
+
+}
+
+.section-title{
+
+    font-size:46px;
+
+    color:var(--primary);
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+
+    max-width:700px;
+
+}
+
+.section-title span{
+
+    color:var(--gold);
+
+}
+
+.section-description{
+
+    color:#666;
+
+    line-height:1.8;
+
+    max-width:700px;
+
+    margin-bottom:70px;
+
+}
+.services{
+
+    background:white;
+
+    padding:110px 8%;
 
 }
 /*================ INSURANCE ================*/
@@ -853,6 +911,17 @@ header{
 .stats-grid{
 
     grid-template-columns:1fr 1fr;
+
+}
+    .section-title{
+
+    font-size:36px;
+
+}
+
+.section-description{
+
+    margin-bottom:45px;
 
 }
 }
