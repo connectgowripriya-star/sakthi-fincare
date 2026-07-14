@@ -188,11 +188,8 @@ header{
 .hero-wrapper{
 
     display:grid;
-
-   grid-template-columns:1fr 1fr;
-
-    gap:80px;
-
+    grid-template-columns:1.3fr .9fr;
+    gap:30px;
     align-items:center;
 
 }
@@ -219,7 +216,7 @@ header{
 
     font-size:58px;
 
-    line-height:1.2;
+    line-height:1.1;
 
     margin-bottom:25px;
 
@@ -339,31 +336,25 @@ header{
 }
 .hero-right{
 
-    display:flex;
-
-    justify-content:flex-end;
-
+   display:flex;
+    justify-content:center;
     align-items:center;
-     position:relative;
-
+    transform:translateY(-60px);
+ position:relative;
 }
 
 .hero-right::before{
 
-    content:"";
-
+      content:"";
     position:absolute;
-
     width:420px;
-
     height:420px;
-
-    background:rgba(212,175,55,.15);
-
     border-radius:50%;
-
-    filter:blur(70px);
-
+    background:radial-gradient(
+        circle,
+        rgba(212,175,55,.18),
+        transparent 70%
+    );
     z-index:0;
 
 }
@@ -375,7 +366,7 @@ header{
     height:auto;
     transform:translateY(-20px);
     position:relative;
-    z-index:2;
+    z-index:1;
 
 }
 
