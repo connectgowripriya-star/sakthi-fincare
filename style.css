@@ -76,11 +76,38 @@ header{
     align-items:center;
 
 }
+/* ==================== LOGO ==================== */
+
+.logo{
+
+    display:flex;
+    align-items:center;
+
+}
 
 .logo img{
-    
-    height:52px;
+
+    display:block;
     width:auto;
+
+}
+
+/* Desktop Logo */
+
+.logo-desktop{
+
+    display:block;
+    height:58px;
+
+}
+
+/* Mobile Logo */
+
+.logo-mobile{
+
+    display:none;
+    height:54px;
+
 }
 
 .nav-links{
@@ -514,16 +541,15 @@ header{
 
 .service-card{
 
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:flex-start;
-
-    min-height:320px;
-
+     background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border: none;
 }
-
+.service-card{
+    border-top: 5px solid var(--gold);
+}
 .service-card:hover{
 
     transform:translateY(-10px);
@@ -829,6 +855,13 @@ header{
     grid-template-columns:repeat(2,1fr);
 
 }
+
+     .logo-desktop{
+
+        height:54px;
+
+    }
+
 }
 
 /* ================= MOBILE ================= */
@@ -896,6 +929,12 @@ header{
         font-size:17px;
 
     }
+.navbar{
+
+    height:70px;
+
+}
+
 
     .services h2,
     .insurance h2,
@@ -922,19 +961,9 @@ header{
     grid-template-columns:repeat(2,1fr);
 
 }
-    .logo{
+  
 
-    width:170px;
 
-    height:100px;
-
-}
-
-.logo img{
-
-    max-width:110px;
-
-}
     .testimonial-card{
 
     min-width:300px;
@@ -1031,6 +1060,18 @@ header{
     grid-template-columns:1fr;
 
 }
+      .logo-desktop{
+
+        display:none;
+
+    }
+
+    .logo-mobile{
+
+        display:block;
+        height:48px;
+
+    }
 }
 
 /* ================= SMALL MOBILE ================= */
@@ -1065,19 +1106,7 @@ header{
     height:120px;
 
 }
-.logo{
 
-    width:140px;
-
-    height:90px;
-
-}
-
-.logo img{
-
-    max-width:90px;
-
-}
     .testimonial-card{
 
     min-width:260px;
@@ -1148,6 +1177,12 @@ header{
     font-size:16px;
 
 }
+
+    .logo-mobile{
+
+        height:44px;
+
+    }
 }
 /*================ LOAN PROCESS ================*/
 
