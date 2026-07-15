@@ -1,1 +1,2448 @@
 
+/*==================================================
+  SAKTHI FINCARE
+  Landing Page Stylesheet
+  Version : 2.0
+===================================================*/
+
+/*==================================================
+    GLOBAL RESPONSIVE FIXES
+===================================================*/
+
+*,
+*::before,
+*::after{
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    overflow-x:hidden;
+
+}
+
+body{
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+    display:block;
+
+}
+
+iframe{
+
+    max-width:100%;
+
+}
+
+button{
+
+    cursor:pointer;
+
+}
+
+/*==================================================
+    1. GOOGLE FONT
+===================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*==================================================
+    2. ROOT VARIABLES
+===================================================*/
+
+:root{
+
+    /* Brand Colors */
+
+    --primary:#0B1D3A;
+    --secondary:#142B5A;
+    --gold:#D4AF37;
+    --cream:#F2E7C9;
+    --white:#FFFFFF;
+
+    /* Text */
+
+    --text:#444;
+    --text-light:#777;
+
+    /* Effects */
+
+    --shadow:
+        0 12px 35px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+    /* Layout */
+
+    --container-width:1200px;
+
+    --section-padding:90px;
+
+    --section-padding-mobile:70px;
+
+}
+
+
+/*==================================================
+    3. RESET
+===================================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    color:var(--text);
+
+    background:var(--white);
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+button{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+/*==================================================
+    4. COMMON LAYOUT
+===================================================*/
+
+.container{
+
+    width:min(100%, var(--container-width));
+
+    margin:0 auto;
+
+}
+
+section{
+
+    padding:var(--section-padding) 8%;
+
+}
+
+
+/*==================================================
+    5. SECTION TITLES
+===================================================*/
+
+.section-tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    background:#EEF5FF;
+
+    color:var(--secondary);
+
+    border-radius:30px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+.section-title{
+
+    font-size:48px;
+
+    color:var(--primary);
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+
+}
+
+.section-title span{
+
+    color:var(--gold);
+
+}
+
+.section-description{
+
+    max-width:720px;
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    margin-bottom:65px;
+
+}
+
+/*==================================================
+    6. BUTTONS
+===================================================*/
+
+.btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:14px 34px;
+
+    border-radius:50px;
+
+    font-size:16px;
+    font-weight:600;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.btn-primary{
+
+    background:var(--gold);
+    color:var(--white);
+
+}
+
+.btn-primary:hover{
+
+    background:#C89B18;
+    transform:translateY(-3px);
+
+}
+
+.btn-outline{
+
+    border:2px solid rgba(255,255,255,.45);
+    color:var(--white);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--gold);
+    border-color:var(--gold);
+
+}
+
+
+/*==================================================
+    7. HEADER
+===================================================*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    background:rgba(255,255,255,.98);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 6px 20px rgba(0,0,0,.06);
+
+    z-index:999;
+
+}
+
+
+/*==================================================
+    8. NAVBAR
+===================================================*/
+
+.navbar{
+
+    height:82px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+}
+
+.logo{
+
+    flex-shrink:0;
+
+}
+
+.logo img{
+
+    height:58px;
+    width:auto;
+
+}
+
+
+/* Desktop */
+
+.logo-desktop{
+
+    display:block;
+
+}
+
+.logo-mobile{
+
+    display:none;
+
+}
+
+
+/* Navigation */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:36px;
+
+    margin-left:auto;
+
+}
+
+.nav-links a{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    position:relative;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0;
+    height:2px;
+
+    background:var(--gold);
+
+    transition:var(--transition);
+
+}
+
+.nav-links a:hover{
+
+    color:var(--gold);
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+
+/*==================================================
+    9. MOBILE MENU
+===================================================*/
+
+.menu-toggle{
+
+    display:none;
+
+    font-size:28px;
+
+    color:var(--primary);
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+
+
+/*==================================================
+    10. TABLET
+===================================================*/
+
+@media(max-width:992px){
+
+    .navbar{
+
+        gap:20px;
+
+    }
+
+    .nav-links{
+
+        gap:22px;
+
+    }
+
+    .logo img{
+
+        height:54px;
+
+    }
+
+}
+
+
+/*==================================================
+    11. MOBILE
+===================================================*/
+
+@media(max-width:768px){
+
+    section{
+
+        padding:var(--section-padding-mobile) 20px;
+
+    }
+
+    .navbar{
+
+        height:74px;
+
+    }
+
+    .logo-desktop{
+
+        display:none;
+
+    }
+
+    .logo-mobile{
+
+        display:block;
+        height:46px;
+
+    }
+
+    .menu-toggle{
+
+        display:block;
+
+        z-index:1001;
+
+    }
+
+    .nav-links{
+
+        position:fixed;
+
+        top:74px;
+
+        left:-100%;
+
+        width:100%;
+
+        background:var(--white);
+
+        flex-direction:column;
+
+        gap:28px;
+
+        padding:35px 0;
+
+        box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+        transition:left .35s ease;
+
+    }
+
+    .nav-links.active{
+
+        left:0;
+
+    }
+
+    .desktop-btn{
+
+        display:none;
+
+    }
+
+}
+
+
+/*==================================================
+    12. SMALL MOBILE
+===================================================*/
+
+@media(max-width:480px){
+
+    .logo-mobile{
+
+        height:42px;
+
+    }
+
+}
+/*==================================================
+    13. HERO SECTION
+===================================================*/
+
+.hero{
+
+    background:var(--primary);
+
+    color:var(--white);
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-top:130px;
+
+    overflow:hidden;
+
+}
+
+.hero-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1.15fr .85fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+
+/* Left Content */
+
+.hero-content{
+
+    max-width:650px;
+
+}
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 24px;
+
+    background:rgba(255,255,255,.10);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    margin-bottom:28px;
+
+}
+
+.hero h1{
+
+    font-size:64px;
+
+    line-height:1.12;
+
+    margin-bottom:28px;
+
+    font-weight:800;
+
+}
+
+.hero h1 span{
+
+    color:var(--gold);
+
+}
+
+.hero p{
+
+    color:rgba(255,255,255,.82);
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+
+/* CTA Buttons */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:50px;
+
+}
+
+
+/* Hero Feature Cards */
+
+.hero-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.hero-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    transition:var(--transition);
+
+}
+
+.hero-card:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.12);
+
+}
+
+.hero-card i{
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:var(--white);
+
+    font-size:24px;
+
+}
+
+.hero-card h4{
+
+    font-size:20px;
+
+    margin-bottom:6px;
+
+    color:white;
+
+}
+
+.hero-card p{
+
+    margin:0;
+
+    font-size:15px;
+
+    color:rgba(255,255,255,.70);
+
+}
+
+
+/* Right Image */
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-image img{
+
+    width:100%;
+
+    max-width:620px;
+
+    animation:heroFloat 5s ease-in-out infinite;
+
+    filter:drop-shadow(0 25px 35px rgba(0,0,0,.30));
+
+}
+
+
+/* Floating Animation */
+
+@keyframes heroFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+    HERO RESPONSIVE
+===================================================*/
+
+@media(max-width:992px){
+
+    .hero{
+
+        min-height:auto;
+
+        padding-top:120px;
+
+    }
+
+    .hero-wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+        text-align:center;
+
+    }
+
+    .hero-content{
+
+        max-width:100%;
+
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+
+    }
+
+    .hero-features{
+
+        max-width:700px;
+
+        margin:auto;
+
+    }
+
+    .hero-image{
+
+        order:-1;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero{
+
+        padding-top:110px;
+
+    }
+
+    .hero h1{
+
+        font-size:46px;
+
+    }
+
+    .hero p{
+
+        font-size:18px;
+
+    }
+
+    .hero-features{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .hero-card{
+
+        text-align:left;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .hero h1{
+
+        font-size:38px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .hero-buttons .btn{
+
+        width:100%;
+
+    }
+
+}
+
+/*==================================================
+    14. HERO STATISTICS
+===================================================*/
+
+.stats{
+
+    position:relative;
+
+    margin-top:-70px;
+
+    z-index:10;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.stat-card{
+
+    background:var(--white);
+
+    border-radius:var(--radius);
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.stat-card h2{
+
+    color:var(--primary);
+
+    font-size:48px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    color:var(--text-light);
+
+    font-size:17px;
+
+}
+/*==================================================
+    HERO STATISTICS RESPONSIVE
+===================================================*/
+
+@media(max-width:992px){
+
+    .stats{
+
+        margin-top:0;
+
+        padding-top:60px;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .stats-grid{
+
+        gap:20px;
+
+    }
+
+    .stat-card{
+
+        padding:28px 20px;
+
+    }
+
+    .stat-card h2{
+
+        font-size:38px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+/*==================================================
+    15. SERVICES
+===================================================*/
+
+.services{
+
+    background:var(--white);
+
+}
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.service-card{
+
+    background:var(--white);
+
+    border-radius:22px;
+
+    padding:38px 32px;
+
+    border-top:5px solid var(--gold);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+    display:flex;
+
+    flex-direction:column;
+
+    transition:var(--transition);
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.service-icon{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:50%;
+
+    background:#FFF8E8;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+}
+
+.service-icon i{
+
+    color:var(--gold);
+
+    font-size:30px;
+
+}
+
+.service-card h3{
+
+    color:var(--primary);
+
+    font-size:26px;
+
+    margin-bottom:16px;
+
+}
+
+.service-card p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    margin-bottom:28px;
+
+    flex:1;
+
+}
+
+.service-card a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--secondary);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.service-card a:hover{
+
+    color:var(--gold);
+
+    gap:16px;
+
+}
+/*==================================================
+    SERVICES RESPONSIVE
+===================================================*/
+
+@media(max-width:992px){
+
+    .services-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .services{
+
+        text-align:center;
+
+    }
+
+    .services-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .service-card{
+
+        padding:34px 28px;
+
+    }
+
+    .service-icon{
+
+        margin:0 auto 24px;
+
+    }
+
+    .service-card a{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .service-card{
+
+        padding:30px 24px;
+
+    }
+
+    .service-card h3{
+
+        font-size:24px;
+
+    }
+
+}
+/*==================================================
+    16. INSURANCE
+===================================================*/
+
+.insurance{
+
+    background:var(--cream);
+
+}
+
+.insurance-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.insurance-card{
+
+    background:var(--white);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    display:flex;
+
+    gap:22px;
+
+    align-items:flex-start;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+
+    transition:var(--transition);
+
+}
+
+.insurance-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.10);
+
+}
+
+.insurance-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:18px;
+
+    background:#FFF8E8;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+.insurance-icon i{
+
+    color:var(--gold);
+
+    font-size:30px;
+
+}
+
+.insurance-content h3{
+
+    color:var(--primary);
+
+    margin-bottom:12px;
+
+    font-size:24px;
+
+}
+
+.insurance-content p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+/*==================================================
+    INSURANCE RESPONSIVE
+===================================================*/
+
+@media(max-width:992px){
+
+    .insurance-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .insurance{
+
+        text-align:center;
+
+    }
+
+    .insurance-card{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+}
+/*==================================================
+    17. WHY CHOOSE US
+===================================================*/
+
+.why-us{
+
+    background:var(--white);
+
+}
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.why-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:24px;
+
+    padding:32px;
+
+    background:var(--white);
+
+    border-radius:20px;
+
+    border-left:5px solid var(--gold);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+    transition:var(--transition);
+
+}
+
+.why-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+
+.why-icon{
+
+    width:72px;
+
+    height:72px;
+
+    border-radius:18px;
+
+    background:#FFF8E8;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+}
+
+.why-icon i{
+
+    color:var(--gold);
+
+    font-size:30px;
+
+}
+
+.why-content h3{
+
+    color:var(--primary);
+
+    margin-bottom:12px;
+
+    font-size:24px;
+
+}
+
+.why-content p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+/*==================================================
+    WHY CHOOSE US RESPONSIVE
+===================================================*/
+
+@media(max-width:992px){
+
+    .why-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .why-us{
+
+        text-align:center;
+
+    }
+
+    .why-card{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+}
+/*==================================================
+    18. LOAN PROCESS
+===================================================*/
+
+.loan-process{
+
+    background:var(--cream);
+
+}
+
+.process-wrapper{
+
+    margin-top:70px;
+
+}
+
+.process-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    position:relative;
+
+}
+
+/* Connecting Line */
+
+.process-grid::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:40px;
+
+    left:12%;
+
+    width:76%;
+
+    height:4px;
+
+    background:#E3D3A3;
+
+    z-index:0;
+
+}
+
+/* Card */
+
+.process-card{
+
+    position:relative;
+
+    text-align:center;
+
+    z-index:2;
+
+}
+
+/* Number Circle */
+
+.process-number{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:white;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+
+}
+
+.process-card h3{
+
+    color:var(--primary);
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+.process-card p{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    max-width:240px;
+
+    margin:auto;
+
+}
+/*==================================================
+    LOAN PROCESS RESPONSIVE
+===================================================*/
+
+@media(max-width:992px){
+
+    .process-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .process-grid::before{
+
+        display:none;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .process-grid{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+
+    }
+
+    .process-card{
+
+        position:relative;
+
+    }
+
+    .process-card:not(:last-child)::after{
+
+        content:"";
+
+        position:absolute;
+
+        left:50%;
+
+        top:90px;
+
+        width:4px;
+
+        height:45px;
+
+        transform:translateX(-50%);
+
+        background:#E3D3A3;
+
+    }
+
+}
+/*==================================================
+    19. PARTNERS
+===================================================*/
+
+.partners{
+
+    background:#fff;
+
+}
+
+.partner-slider{
+
+    overflow:hidden;
+
+    position:relative;
+
+    margin-top:50px;
+
+}
+
+.partner-track{
+
+    display:flex;
+
+    width:max-content;
+
+    animation:partnerScroll 30s linear infinite;
+
+}
+
+.partner-slider:hover .partner-track{
+
+    animation-play-state:paused;
+
+}
+
+.partner-card{
+
+    width:220px;
+
+    height:120px;
+
+    background:white;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:0 15px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+    transition:var(--transition);
+
+}
+
+.partner-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.partner-card img{
+
+    width:150px;
+
+    max-height:70px;
+
+    object-fit:contain;
+
+}
+
+@keyframes partnerScroll{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+/*==================================================
+    PARTNERS RESPONSIVE
+===================================================*/
+
+@media(max-width:768px){
+
+    .partner-card{
+
+        width:180px;
+
+        height:100px;
+
+    }
+
+    .partner-card img{
+
+        width:130px;
+
+    }
+
+}
+/*==================================================
+    20. TESTIMONIALS
+===================================================*/
+
+.testimonials{
+
+    background:var(--cream);
+
+}
+
+.testimonial-slider{
+
+    overflow:hidden;
+
+    margin-top:60px;
+
+}
+
+.testimonial-track{
+
+    display:flex;
+
+    gap:30px;
+
+    width:max-content;
+
+    animation:testimonialScroll 28s linear infinite;
+
+}
+
+.testimonial-slider:hover .testimonial-track{
+
+    animation-play-state:paused;
+
+}
+
+.testimonial-card{
+
+    width:360px;
+
+    background:var(--white);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.testimonial-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.quote{
+
+    font-size:34px;
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+
+}
+
+.testimonial-card p{
+
+    line-height:1.8;
+
+    margin-bottom:22px;
+
+}
+
+.stars{
+
+    color:#FDBA12;
+
+    margin-bottom:18px;
+
+}
+
+.testimonial-card h4{
+
+    color:var(--primary);
+
+    margin-bottom:5px;
+
+}
+
+.testimonial-card span{
+
+    color:var(--text-light);
+
+}
+
+@keyframes testimonialScroll{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+/*==================================================
+    TESTIMONIALS RESPONSIVE
+===================================================*/
+
+@media(max-width:768px){
+
+    .testimonial-card{
+
+        width:300px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .testimonial-card{
+
+        width:260px;
+
+    }
+
+}
+/*==================================================
+    21. CALL TO ACTION
+===================================================*/
+
+.cta{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:white;
+
+}
+
+.cta-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.cta h2{
+
+    font-size:52px;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+
+}
+
+.cta h2 span{
+
+    color:var(--gold);
+
+}
+
+.cta p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    margin-bottom:45px;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.85);
+
+}
+
+.cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:22px;
+
+    flex-wrap:wrap;
+
+}
+
+.cta .btn{
+
+    min-width:220px;
+
+}
+/*==================================================
+    CTA RESPONSIVE
+===================================================*/
+
+@media(max-width:768px){
+
+    .cta h2{
+
+        font-size:38px;
+
+    }
+
+    .cta-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .cta h2{
+
+        font-size:32px;
+
+    }
+
+    .cta .btn{
+
+        width:100%;
+
+    }
+
+}
+/*==================================================
+    22. CONTACT
+===================================================*/
+
+.contact{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.contact-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.contact-info h2{
+
+    font-size:48px;
+
+    margin-bottom:25px;
+
+}
+
+.contact-info p{
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.82);
+
+    margin-bottom:35px;
+
+}
+
+.contact-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.contact-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    font-size:18px;
+
+}
+
+.contact-item i{
+
+    color:var(--gold);
+
+    font-size:22px;
+
+}
+
+.contact-form{
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:40px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.form-group{
+
+    margin-bottom:18px;
+
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-family:'Poppins',sans-serif;
+
+    transition:var(--transition);
+
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+
+    outline:none;
+
+    border-color:var(--gold);
+
+    box-shadow:0 0 0 4px rgba(212,175,55,.15);
+
+}
+
+.contact-form textarea{
+
+    resize:vertical;
+
+}
+
+.contact-form button{
+
+    width:100%;
+
+}
+/*==================================================
+    CONTACT RESPONSIVE
+===================================================*/
+
+@media(max-width:992px){
+
+    .contact-wrapper{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .contact{
+
+        text-align:center;
+
+    }
+
+    .contact-list{
+
+        align-items:center;
+
+    }
+
+    .contact-item{
+
+        justify-content:center;
+
+    }
+
+    .contact-form{
+
+        padding:30px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .contact-info h2{
+
+        font-size:34px;
+
+    }
+
+    .contact-form{
+
+        padding:24px;
+
+    }
+
+}
+/*==================================================
+    23. FOOTER
+===================================================*/
+
+.footer{
+
+    background:#081525;
+
+    color:#fff;
+
+    padding:80px 8% 25px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1.5fr;
+
+    gap:50px;
+
+}
+
+.footer-about img{
+
+    width:180px;
+
+    margin-bottom:22px;
+
+}
+
+.footer-about p{
+
+    color:#c9d2dc;
+
+    line-height:1.9;
+
+    margin-bottom:25px;
+
+}
+
+.footer-badges{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.footer-badges span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#fff;
+
+    font-size:15px;
+
+}
+
+.footer-badges i{
+
+    color:var(--gold);
+
+}
+
+.footer h3{
+
+    color:var(--gold);
+
+    margin-bottom:24px;
+
+    font-size:22px;
+
+}
+
+.footer ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.footer ul a{
+
+    color:#c9d2dc;
+
+    transition:var(--transition);
+
+}
+
+.footer ul a:hover{
+
+    color:var(--gold);
+
+    padding-left:6px;
+
+}
+
+.footer-services li{
+
+    color:#c9d2dc;
+
+}
+
+.footer-contact p{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    color:#c9d2dc;
+
+    margin-bottom:18px;
+
+    line-height:1.7;
+
+}
+
+.footer-contact i{
+
+    color:var(--gold);
+
+    margin-top:4px;
+
+}
+
+.social-icons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:28px;
+
+}
+
+.social-icons a{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#142B5A;
+
+    color:white;
+
+    transition:var(--transition);
+
+}
+
+.social-icons a:hover{
+
+    background:var(--gold);
+
+    transform:translateY(-5px);
+
+}
+
+.footer-bottom{
+
+    margin-top:60px;
+
+    padding-top:25px;
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    text-align:center;
+
+    color:#aeb7c2;
+
+    font-size:15px;
+
+}
+
+/*==================================================
+    FOOTER RESPONSIVE
+===================================================*/
+
+@media(max-width:992px){
+
+    .footer-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .footer{
+
+        padding:60px 20px 20px;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+        text-align:center;
+
+    }
+
+    .footer-about img{
+
+        margin:0 auto 22px;
+
+    }
+
+    .footer-badges{
+
+        align-items:center;
+
+    }
+
+    .footer-contact p{
+
+        justify-content:center;
+
+    }
+
+    .social-icons{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .footer h3{
+
+        font-size:20px;
+
+    }
+
+}
