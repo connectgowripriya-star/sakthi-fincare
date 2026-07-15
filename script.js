@@ -3,6 +3,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
 menuToggle.addEventListener("click", () => {
+    console.log("Hamburger Clicked");
 
     navLinks.classList.toggle("active");
 
