@@ -71,7 +71,7 @@ const observer = new IntersectionObserver((entries, observer) => {
         const hasCr = counter.textContent.includes("Cr");
         const hasPlus = counter.textContent.includes("+");
 
-        const duration = 1800; // 1.8 seconds
+        const duration = 2500; // 2.5 seconds
         const startTime = performance.now();
 
         function animate(currentTime) {
