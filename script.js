@@ -129,6 +129,19 @@ counters.forEach(counter => observer.observe(counter));
 
 const backToTop = document.querySelector(".back-to-top");
 
+const backToTop = document.querySelector(".back-to-top");
+
+if (!backToTop) {
+
+    console.error("Back To Top button not found.");
+
+} else {
+
+    console.log("Back To Top Found");
+
+}
+
+if (backToTop) {
 window.addEventListener("scroll", () => {
 
     if (window.scrollY > 400) {
@@ -154,7 +167,7 @@ backToTop.addEventListener("click", () => {
     });
 
 });
-
+}
 // ================= ACTIVE NAVIGATION =================
 
 const sections = document.querySelectorAll("section[id]");
