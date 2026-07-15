@@ -1,32 +1,13 @@
 console.log("script loaded");
+
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
-menuToggle.addEventListener("click", () => {
-    console.log("Hamburger Clicked");
+// ================= MOBILE MENU =================
 
-    navLinks.classList.toggle("active");
+menuToggle.addEventListener("click", (e) => {
 
-    menuToggle.textContent =
-        navLinks.classList.contains("active") ? "✕" : "☰";
-
-});
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navLinks.classList.remove("active");
-
-        menuToggle.textContent = "☰";
-
-    });
-
-});
-
-// Close menu when clicking outside
-
-menuToggle.addEventListener("click", () => {
+    e.stopPropagation();
 
     navLinks.classList.toggle("active");
 
@@ -36,6 +17,8 @@ menuToggle.addEventListener("click", () => {
         navLinks.classList.contains("active") ? "✕" : "☰";
 
 });
+
+// ================= AUTO CLOSE =================
 
 document.querySelectorAll(".nav-links a").forEach(link => {
 
@@ -48,5 +31,24 @@ document.querySelectorAll(".nav-links a").forEach(link => {
         menuToggle.textContent = "☰";
 
     });
+
+});
+
+// ================= CLICK OUTSIDE =================
+
+document.addEventListener("click", (e) => {
+
+    if (
+        !navLinks.contains(e.target) &&
+        !menuToggle.contains(e.target)
+    ) {
+
+        navLinks.classList.remove("active");
+
+        document.body.classList.remove("menu-open");
+
+        menuToggle.textContent = "☰";
+
+    }
 
 });
