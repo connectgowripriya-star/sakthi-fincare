@@ -417,13 +417,23 @@ header{
 
     display:none;
 
-    font-size:28px;
-
-    color:var(--primary);
+    font-size:30px;
 
     cursor:pointer;
 
+    color:var(--primary);
+
     user-select:none;
+
+    transition:.3s;
+
+    z-index:1101;
+
+}
+
+.menu-toggle.active{
+
+    transform:rotate(90deg);
 
 }
 
