@@ -129,8 +129,6 @@ counters.forEach(counter => observer.observe(counter));
 
 const backToTop = document.querySelector(".back-to-top");
 
-const backToTop = document.querySelector(".back-to-top");
-
 if (!backToTop) {
 
     console.error("Back To Top button not found.");
