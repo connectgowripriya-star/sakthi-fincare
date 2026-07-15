@@ -1011,37 +1011,41 @@ header{
     min-width:300px;
 
 }
-  .contact{
+   .contact{
 
-        padding:70px 0;
+        padding:70px 20px;
 
     }
 
     .contact-wrapper{
 
-        grid-template-columns:1fr;
-        gap:40px;
-        text-align:center;
+        display:flex;
+        flex-direction:column;
+        gap:35px;
+        align-items:stretch;
 
     }
 
     .contact-info{
 
-        order:1;
+        width:100%;
 
     }
 
     .contact-form{
 
-        order:2;
-
         width:100%;
-        max-width:500px;
-        margin:0 auto;
-
-        padding:30px 25px;
+        max-width:100%;
+        padding:25px;
 
     }
+
+    .contact-form form{
+
+        width:100%;
+
+    }
+
 
     .contact-list{
 
