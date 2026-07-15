@@ -131,7 +131,7 @@ const backToTop = document.querySelector(".back-to-top");
 
 if (!backToTop) {
 
-    console.error("Back To Top button not found.");
+    console.log("Back To Top button not found.");
 
 } else {
 
