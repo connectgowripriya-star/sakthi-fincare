@@ -1427,7 +1427,7 @@ header{
 
     background:var(--white);
 
-    border-radius:20px;
+   border-radius:var(--radius-lg);
 
     border-left:5px solid var(--gold);
 
