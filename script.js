@@ -52,6 +52,7 @@ document.addEventListener("click", (e) => {
     }
 
 });
+
 // ================= STATS COUNTER =================
 
 const counters = document.querySelectorAll(".counter");
@@ -64,43 +65,53 @@ const observer = new IntersectionObserver((entries, observer) => {
 
         const counter = entry.target;
 
-        const target = +counter.dataset.target;
+        const target = parseInt(counter.dataset.target);
 
         const hasCurrency = counter.textContent.includes("₹");
         const hasCr = counter.textContent.includes("Cr");
         const hasPlus = counter.textContent.includes("+");
 
-        let current = 0;
+        const duration = 1800; // 1.8 seconds
+        const startTime = performance.now();
 
-        const increment = Math.max(1, Math.ceil(target / 60));
+        function animate(currentTime) {
 
-        const update = () => {
+            const elapsed = currentTime - startTime;
 
-            current += increment;
+            const progress = Math.min(elapsed / duration, 1);
 
-            if (current >= target) {
+            // Ease-out animation
+            const easeOut = 1 - Math.pow(1 - progress, 3);
 
-                current = target;
+            const value = Math.floor(easeOut * target);
+
+            let display = value;
+
+            if (hasCurrency) display = "₹" + display;
+            if (hasCr) display += "Cr";
+            if (hasPlus) display += "+";
+
+            counter.textContent = display;
+
+            if (progress < 1) {
+
+                requestAnimationFrame(animate);
+
+            } else {
+
+                let finalValue = target;
+
+                if (hasCurrency) finalValue = "₹" + finalValue;
+                if (hasCr) finalValue += "Cr";
+                if (hasPlus) finalValue += "+";
+
+                counter.textContent = finalValue;
 
             }
 
-            let value = current.toString();
+        }
 
-            if (hasCurrency) value = "₹" + value;
-            if (hasCr) value += "Cr";
-            if (hasPlus) value += "+";
-
-            counter.textContent = value;
-
-            if (current < target) {
-
-                requestAnimationFrame(update);
-
-            }
-
-        };
-
-        update();
+        requestAnimationFrame(animate);
 
         observer.unobserve(counter);
 
@@ -108,7 +119,7 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 }, {
 
-    threshold: 0.5
+    threshold: 0.4
 
 });
 
