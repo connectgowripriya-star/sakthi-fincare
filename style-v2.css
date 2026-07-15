@@ -506,27 +506,35 @@ header{
 
     .nav-links{
 
-        position:fixed;
+    position:fixed;
 
-        top:74px;
+    top:74px;
 
-        left:-100%;
+    left:-100%;
 
-        width:100%;
+    width:100vw;
 
-        background:var(--white);
+    height:calc(100vh - 74px);
 
-        flex-direction:column;
+    display:flex;
 
-        gap:28px;
+    flex-direction:column;
 
-        padding:35px 0;
+    justify-content:flex-start;
 
-        box-shadow:0 10px 25px rgba(0,0,0,.08);
+    align-items:center;
 
-        transition:left .35s ease;
+    gap:30px;
 
-    }
+    padding:40px 20px;
+
+    background:#fff;
+
+    transition:left .35s ease;
+
+    z-index:1000;
+
+}
 
     .nav-links.active{
 
