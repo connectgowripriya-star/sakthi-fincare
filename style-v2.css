@@ -3006,10 +3006,6 @@ header{
 
     position:relative;
 
-    max-height:85vh;
-
-    overflow-y:auto;
-
     animation:popup .35s ease;
 
 }
@@ -3141,6 +3137,25 @@ header{
     color:#666;
 
     margin-bottom:15px;
+
+}
+.modal-footer h3{
+
+    color:var(--primary);
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+.modal-footer p{
+
+    color:#666;
+
+    margin-bottom:24px;
+
+    line-height:1.7;
 
 }
 @media(max-width:768px){
