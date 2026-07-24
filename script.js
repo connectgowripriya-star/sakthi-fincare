@@ -255,27 +255,31 @@ const loanDocuments = {
 
     home: {
 
-        title: "🏠 Home Loan Documents",
+    title: "🏠 Home Loan Documents",
 
-        subtitle: "Keep the following documents ready before applying.",
+    subtitle: "Keep the following documents ready before applying.",
 
-        items: [
+    items: [
 
-            "PAN Card",
+        "PAN Card",
 
-            "Aadhaar Card",
+        "Aadhaar Card",
 
-            "Passport Size Photograph",
+        "Passport Size Photographs",
 
-            "Address Proof",
+        "Last 3 Salary Slips / Income Proof",
 
-            "Income Proof",
+        "Last 6 Months Bank Statement",
 
-            "Bank Statement"
+        "Form 16 / ITR",
 
-        ]
+        "Property Documents",
 
-    }
+        "Latest Property Tax Receipt"
+
+    ]
+
+}
 
 };
 
@@ -315,13 +319,29 @@ document.querySelectorAll(".document-btn").forEach(button => {
 
             <div class="modal-footer">
 
-                <p>Need help with your application?</p>
+              <h3>Need assistance with your loan?</h3>
 
-                <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-primary">
+                 <p>Our financial advisor is ready to help you.</p>
 
-                    Chat on WhatsApp
+              <div class="modal-actions">
 
-                </a>
+    <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-primary">
+
+        <i class="fa-brands fa-whatsapp"></i>
+
+        Chat on WhatsApp
+
+    </a>
+
+    <a href="tel:+91XXXXXXXXXX" class="btn btn-secondary">
+
+        <i class="fa-solid fa-phone"></i>
+
+        Call Now
+
+    </a>
+
+</div>
 
             </div>
 
