@@ -242,3 +242,115 @@ reveals.forEach(section => {
     revealObserver.observe(section);
 
 });
+
+/*==========================================
+    DOCUMENT CHECKLIST MODAL
+==========================================*/
+
+const documentModal = document.getElementById("documentModal");
+const modalContent = document.getElementById("modalContent");
+const modalClose = document.querySelector(".modal-close");
+
+const loanDocuments = {
+
+    home: {
+
+        title: "🏠 Home Loan Documents",
+
+        subtitle: "Keep the following documents ready before applying.",
+
+        items: [
+
+            "PAN Card",
+
+            "Aadhaar Card",
+
+            "Passport Size Photograph",
+
+            "Address Proof",
+
+            "Income Proof",
+
+            "Bank Statement"
+
+        ]
+
+    }
+
+};
+
+document.querySelectorAll(".document-btn").forEach(button => {
+
+    button.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        const loan = this.dataset.loan;
+
+        if(!loanDocuments[loan]) return;
+
+        const data = loanDocuments[loan];
+
+        modalContent.innerHTML = `
+
+            <h2 class="modal-title">${data.title}</h2>
+
+            <p class="modal-subtitle">${data.subtitle}</p>
+
+            <ul class="modal-list">
+
+                ${data.items.map(item => `
+
+                    <li>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <span>${item}</span>
+
+                    </li>
+
+                `).join("")}
+
+            </ul>
+
+            <div class="modal-footer">
+
+                <p>Need help with your application?</p>
+
+                <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-primary">
+
+                    Chat on WhatsApp
+
+                </a>
+
+            </div>
+
+        `;
+
+        documentModal.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+modalClose.addEventListener("click", () => {
+
+    documentModal.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+});
+
+documentModal.addEventListener("click", (e) => {
+
+    if(e.target === documentModal){
+
+        documentModal.classList.remove("active");
+
+        document.body.style.overflow = "";
+
+    }
+
+});
