@@ -101,7 +101,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 <li><a href="#">Home</a></li>
 
 <li><a href="#services">Services</a></li>
-
+<li><a href="#documents">Documents</a></li>
 <li><a href="#loan-process">Process</a></li>
 
 <li><a href="#partners">Partners</a></li>
@@ -444,6 +444,209 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     </div>
 
 </section>
+    <!--================ DOCUMENTS =================-->
+
+<section class="documents" id="documents">
+
+    <div class="container">
+
+        <span class="section-tag">
+
+            Documents Required
+
+        </span>
+
+        <h2 class="section-title">
+
+            Loan <span>Document Checklist</span>
+
+        </h2>
+
+        <p class="section-description">
+
+            Before applying, keep your documents ready to speed up the approval process.
+            Select your loan type to view the required documents.
+
+        </p>
+
+        <div class="documents-grid">
+
+           <div class="document-card">
+
+    <div class="document-icon">
+        <i class="fa-solid fa-house"></i>
+    </div>
+
+    <h3>Home Loan</h3>
+
+    <ul>
+
+        <li>PAN Card</li>
+        <li>Aadhaar Card</li>
+        <li>Income Proof</li>
+        <li>Bank Statement</li>
+
+    </ul>
+
+   <a href="#"
+   class="document-btn"
+   data-loan="home">
+
+        View Checklist
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</div>
+
+
+<div class="document-card">
+
+    <div class="document-icon">
+        <i class="fa-solid fa-car"></i>
+    </div>
+
+    <h3>Vehicle Loan</h3>
+
+    <ul>
+
+        <li>PAN Card</li>
+        <li>Aadhaar Card</li>
+        <li>Income Proof</li>
+        <li>Vehicle Details</li>
+
+    </ul>
+
+    <a href="#" class="document-btn">
+
+        View Checklist
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</div>
+
+
+<div class="document-card">
+
+    <div class="document-icon">
+        <i class="fa-solid fa-briefcase"></i>
+    </div>
+
+    <h3>Business Loan</h3>
+
+    <ul>
+
+        <li>PAN Card</li>
+        <li>GST / Business Proof</li>
+        <li>Bank Statement</li>
+        <li>IT Returns</li>
+
+    </ul>
+
+    <a href="#" class="document-btn">
+
+        View Checklist
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</div>
+
+
+<div class="document-card">
+
+    <div class="document-icon">
+        <i class="fa-solid fa-coins"></i>
+    </div>
+
+    <h3>Gold Loan</h3>
+
+    <ul>
+
+        <li>PAN Card</li>
+        <li>Aadhaar Card</li>
+        <li>Gold Ornaments</li>
+        <li>Address Proof</li>
+
+    </ul>
+
+    <a href="#" class="document-btn">
+
+        View Checklist
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</div>
+
+
+<div class="document-card">
+
+    <div class="document-icon">
+        <i class="fa-solid fa-graduation-cap"></i>
+    </div>
+
+    <h3>Education Loan</h3>
+
+    <ul>
+
+        <li>Admission Letter</li>
+        <li>Identity Proof</li>
+        <li>Income Proof</li>
+        <li>Academic Records</li>
+
+    </ul>
+
+    <a href="#" class="document-btn">
+
+        View Checklist
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</div>
+
+
+<div class="document-card">
+
+    <div class="document-icon">
+        <i class="fa-solid fa-building-columns"></i>
+    </div>
+
+    <h3>Loan Against Property</h3>
+
+    <ul>
+
+        <li>Property Documents</li>
+        <li>PAN Card</li>
+        <li>Aadhaar Card</li>
+        <li>Income Proof</li>
+
+    </ul>
+
+    <a href="#" class="document-btn">
+
+        View Checklist
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+    </a>
+
+</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ DOCUMENTS =================-->
 <!-- ================= INSURANCE ================= -->
 
 <section class="insurance reveal" id="insurance">
@@ -1407,6 +1610,25 @@ Receive your approved loan amount or policy confirmation with complete support.
 
 </button>
     <script src="script.js"></script>
+    <!--================ DOCUMENT MODAL =================-->
+
+<div class="document-modal" id="documentModal">
+
+    <div class="document-modal-content">
+
+        <button class="modal-close">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+        <div id="modalContent">
+
+        </div>
+
+    </div>
+
+</div>
 </body>
 
 </html>
