@@ -2953,3 +2953,208 @@ header{
     }
 
 }
+
+/*==================================================
+    DOCUMENT MODAL
+===================================================*/
+
+.document-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.6);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s ease;
+
+    z-index:9999;
+
+}
+
+.document-modal.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.document-modal-content{
+
+    background:#fff;
+
+    width:100%;
+
+    max-width:700px;
+
+    border-radius:24px;
+
+    padding:40px;
+
+    position:relative;
+
+    max-height:85vh;
+
+    overflow-y:auto;
+
+    animation:popup .35s ease;
+
+}
+
+@keyframes popup{
+
+    from{
+
+        transform:translateY(20px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+.modal-close{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f4f4f4;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.modal-close:hover{
+
+    background:var(--gold);
+
+    color:#fff;
+
+}
+
+.modal-title{
+
+    font-size:32px;
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.modal-subtitle{
+
+    color:#666;
+
+    margin-bottom:30px;
+
+    line-height:1.7;
+
+}
+
+.modal-list{
+
+    list-style:none;
+
+    display:grid;
+
+    gap:16px;
+
+}
+
+.modal-list li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    padding:16px 18px;
+
+    background:#fafafa;
+
+    border-radius:12px;
+
+    border:1px solid #eee;
+
+}
+
+.modal-list li i{
+
+    color:var(--gold);
+
+    margin-top:3px;
+
+}
+
+.modal-footer{
+
+    margin-top:35px;
+
+    padding-top:25px;
+
+    border-top:1px solid #eee;
+
+    text-align:center;
+
+}
+
+.modal-footer p{
+
+    color:#666;
+
+    margin-bottom:15px;
+
+}
+@media(max-width:768px){
+
+    .document-modal-content{
+
+        padding:28px 22px;
+
+    }
+
+    .modal-title{
+
+        font-size:26px;
+
+    }
+
+}
