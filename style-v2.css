@@ -23,12 +23,6 @@ html{
 
 }
 
-body{
-
-    overflow-x:hidden;
-
-}
-
 img{
 
     max-width:100%;
@@ -124,9 +118,6 @@ body{
     color:var(--text);
 
     background:var(--white);
-
-    overflow-x:hidden;
-
 }
 
 img{
@@ -556,7 +547,7 @@ header{
 
     left:-100%;
 
-    width:100vw;
+    width:100%;
 
     height:calc(100vh - 74px);
 
@@ -675,7 +666,7 @@ header{
 
 .hero h1{
 
-    font-size:64px;
+    font-size:54px;
 
     line-height:1.12;
 
@@ -695,7 +686,7 @@ header{
 
     color:rgba(255,255,255,.82);
 
-    font-size:20px;
+    font-size:18px;
 
     line-height:1.8;
 
@@ -714,7 +705,7 @@ header{
 
     flex-wrap:wrap;
 
-    margin-bottom:50px;
+    margin-top:30px;
 
 }
 
@@ -725,7 +716,7 @@ header{
 
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:repeat(3,1fr);
 
     gap:20px;
 
@@ -913,13 +904,13 @@ header{
 
     .hero h1{
 
-        font-size:46px;
+        font-size:41px;
 
     }
 
     .hero p{
 
-        font-size:18px;
+        font-size:16px;
 
     }
 
@@ -941,13 +932,13 @@ header{
 
     .hero h1{
 
-        font-size:38px;
+        font-size:35px;
 
     }
 
     .hero p{
 
-        font-size:16px;
+        font-size:14px;
 
     }
 
@@ -1923,7 +1914,7 @@ header{
 
 }
 /*==================================================
-    TESTIMONIALS RESPONSIVE
+    TESTIMONIALS RESPONSIVEfv
 ===================================================*/
 
 @media(max-width:768px){
